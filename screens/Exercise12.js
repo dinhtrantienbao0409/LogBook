@@ -17,6 +17,7 @@ import {
 } from "react-native";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useFocusEffect } from "@react-navigation/native";
+import { CameraScreen } from "../screens/CameraScreen";
 
 const DATA = [
   {
@@ -172,11 +173,13 @@ export default function Exercise12({ navigation }) {
             <Text style={styles.btnText}>Add URL</Text>
           </TouchableOpacity>
         )}
+        <TouchableOpacity
+          style={styles.navigateButton}
+          onPress={() => navigation.navigate("Exercise3-4")}
+        >
+          <Text style={styles.btnText}>Exercise 3-4</Text>
+        </TouchableOpacity>
       </View>
-      <Button
-        title="Exercise 3-4"
-        onPress={() => navigation.navigate("Exercise3-4")}
-      />
     </KeyboardAvoidingView>
   );
 }
@@ -215,6 +218,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 10,
     marginHorizontal: 40,
+    marginBottom: 10,
+  },
+  navigateButton: {
+    backgroundColor: "#1e90ff",
+    width: 350,
+    height: 50,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 10,
+    marginHorizontal: 40,
     marginBottom: 50,
   },
   addUrlDisable: {
@@ -225,7 +238,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     borderRadius: 10,
     marginHorizontal: 40,
-    marginBottom: 50,
+    marginBottom: 10,
   },
   backwardBtn: {
     backgroundColor: "#1e90ff",

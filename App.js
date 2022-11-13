@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Exercise12 from "./screens/Exercise12";
 import Exercise34 from "./screens/Exercise34";
+import CameraScreen from "./screens/CameraScreen";
 
 const Stack = createStackNavigator();
 
